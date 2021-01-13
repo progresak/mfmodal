@@ -8,16 +8,19 @@ export const ModalContainer = styled.div`
   bottom: 0;
   right: 0;
   overflow: hidden;
-  font-family: "Open Sans",serif ;
+  font-family: "Open Sans", serif;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transition: opacity 350ms cubic-bezier(.4, 0, .2, 1);
   pointer-events: none;
+  
+  ${({ isActive }) => !isActive && 'opacity: 0;'}
+  ${({ isActive }) => !isActive && 'transform: translateY(-10000px);'}
 `;
 
 export const Backdrop = styled.div`
-  position: absolute;
+position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -26,7 +29,8 @@ export const Backdrop = styled.div`
   opacity: 0.3;
   pointer-events: initial;
   transition: opacity 350ms cubic-bezier(.4, 0, .2, 1);
-  ${(props) => props.onClick && 'cursor: pointer;'}
+  
+  ${({ onClick }) => onClick && 'cursor: pointer;'}
 `;
 
 export const ModalBody = styled.div`

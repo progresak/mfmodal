@@ -16,7 +16,7 @@ export const Button = styled.button`
     color: #ffffff;
     margin-right: 15px;
     margin-top: 15px;
-  
+
     font-size: 16px;
     font-weight: bold;
     padding: 15px 30px;
@@ -30,9 +30,9 @@ export const Button = styled.button`
 `;
 
 export const CenteredContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
   
-  ${({ horizontal }) => horizontal && 'flex-direction: column;'}
+    ${({ horizontal }) => horizontal && 'flex-direction: column;'}
 `;

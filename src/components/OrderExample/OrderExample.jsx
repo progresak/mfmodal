@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { CheckBoxSection, SelectBox, RadioSelect, SmartPosImage } from './components';
 import { Button, CenteredContainer, Divider, Label, Paragraph, SubSectionTitle } from '../common';
 
-const Order = () => (
+const OrderExample = () => (
     <>
         <SubSectionTitle>Vyberte verzi</SubSectionTitle>
         <div>
@@ -133,4 +133,4 @@ const PayElement = styled.span`
   font-weight: bold;
 `;
 
-export default Order;
+export default OrderExample;

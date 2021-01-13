@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import Modal from './components/Modal/Modal';
-import Order from './components/Order/Order';
 
 import './App.css';
-import { Button } from './components/common';
+import { Button, Modal, OrderExample } from './components';
 
 const App = () => {
-    const [isActive, toggleModal] = useState(true);
+    const [isActive, toggleModal] = useState(false);
 
     return (
         <div className="App">
@@ -21,7 +19,7 @@ const App = () => {
                     onClose={() => toggleModal(false)}
                     modalTitle="Objednávka krok 1 ze 3"
                 >
-                    <Order />
+                    <OrderExample />
                 </Modal>
             </header>
         </div>

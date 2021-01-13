@@ -7,17 +7,19 @@ const Modal = ({
     isActive,
     portalContainerId,
     onClose,
-    modalTitle = '',
     children,
+    modalTitle = '',
+    unmountOnClose = false,
+    closeOnBackdropClick = false,
 }) => {
-    if (!isActive) {
+    if (!isActive && unmountOnClose) {
         return null;
     }
 
     return (
         <Portal containerId={portalContainerId}>
-            <ModalContainer>
-                <Backdrop />
+            <ModalContainer isActive={isActive}>
+                <Backdrop onClick={closeOnBackdropClick ? () => onClose() : null} />
                 <ModalBody>
                     <Header>
                         <MyFoxLogo>
