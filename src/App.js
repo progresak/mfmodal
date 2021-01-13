@@ -1,25 +1,48 @@
+import React, { useState } from 'react'
 import logo from './logo.svg';
-import './App.css';
+import Modal from './components/Modal/Modal';
+import Order from './components/Order/Order';
 
-function App() {
+import './App.css';
+import { Button } from './components/common';
+
+const App = () => {
+  const [isActive, toggleModal] = useState(true);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button variant="primary" onClick={() => toggleModal(!isActive)}>
+          Open modal
+        </Button>
+        <Modal
+            isActive={isActive}
+            portalContainerId="modal"
+            onClose={() => toggleModal(false)}
+            modalTitle="Objednávka krok 1 ze 3"
         >
-          Learn React
-        </a>
+          <Order />
+        </Modal>
       </header>
     </div>
   );
 }
+
+// const MyFox = () => {
+//
+//
+//   return (
+//       <OpenSansFontFamily>
+//         <h1>MyfoxApp</h1>
+//         <p>
+//           This is text
+//         </p>
+//
+//           <Order />
+//         </Modal>
+//       </OpenSansFontFamily>
+//   );
+// };
 
 export default App;
