@@ -35,6 +35,7 @@ const Checkbox = styled.input`
   margin-right: 20px;
   transform: scale(1.5);
 `;
+
 const ImgContainer = styled.div`
     margin-right: 20px;
 `;
