@@ -94,6 +94,7 @@ const OrderExample = () => (
 
 const InlineSubSectionTitle = styled(SubSectionTitle)`
   display: inline-block;
+  margin-bottom: 10px;
   margin-right: 10px;
 `;
 
