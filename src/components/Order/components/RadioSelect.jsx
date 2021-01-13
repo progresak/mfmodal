@@ -16,23 +16,21 @@ const RadioSelect = ({
     options,
     groupName,
 }) => (
-    <Container>
+    <div>
         {renderOptions(options, groupName)}
-    </Container>
+    </div>
 );
 
 export default RadioSelect;
 
-const Container = styled.div`
-    
-`;
 const LabelElement = styled.label`
     margin-right: 20px;
     font-size: 14px;
     font-weight: bold;
-  display: inline-block;
+    display: inline-block;
 `;
+
 const Input = styled.input`
     margin-right: 10px;
-  transform: scale(1.3);
+    transform: scale(1.3);
 `;

@@ -60,7 +60,6 @@ export const Header = styled.div`
 
 export const HeaderTitle = styled.h1`
     font-size: 18px;
- 
 `;
 
 export const MyFoxLogo = styled.span`
@@ -71,8 +70,8 @@ export const MyFoxLogo = styled.span`
 `;
 
 export const Content = styled.div`
-  padding: 30px;
-  background-color: ${MODAL_CONTENT_BACKGROUND_COLOR};
-  border-radius: 0 0 ${MODAL_BORDER_RADIUS} ${MODAL_BORDER_RADIUS};
-  overflow: auto;
+    padding: 30px;
+    background-color: ${MODAL_CONTENT_BACKGROUND_COLOR};
+    border-radius: 0 0 ${MODAL_BORDER_RADIUS} ${MODAL_BORDER_RADIUS};
+    overflow: auto;
 `;

@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Label } from '../../../common';
+import { CenteredContainer, Label } from '../../common';
 
-const CheckBoxSection = ({ title, label, ImgElement = null, groupName }) => (
+const CheckBoxSection = ({ title, label, imgElement = null, groupName }) => (
     <label htmlFor={groupName}>
         <Content>
             <Checkbox id={groupName} type="checkbox" />
-            {ImgElement
+            {imgElement
                 ? (
                     <ImgContainer>
-                        {ImgElement}
+                        {imgElement}
                     </ImgContainer>
                 )
                 : null}
@@ -40,8 +40,6 @@ const ImgContainer = styled.div`
     margin-right: 20px;
 `;
 
-const Content = styled.div`
-  display: flex;
-  align-items: center;
+const Content = styled(CenteredContainer)`
   cursor: pointer;
 `;

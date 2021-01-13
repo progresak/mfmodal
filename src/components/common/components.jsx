@@ -15,7 +15,7 @@ export const Button = styled.button`
     cursor: pointer;
     color: #ffffff;
     margin-right: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
   
     font-size: 16px;
     font-weight: bold;
@@ -27,4 +27,12 @@ export const Button = styled.button`
     ${({ variant }) => variant === 'primary' && 'background-color: #30b142;'}
     ${({ variant }) => variant === 'secondary' && 'background-color: #1d60ad;'}
   }
+`;
+
+export const CenteredContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  
+  ${({ horizontal }) => horizontal && 'flex-direction: column;'}
 `;

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BOX_BORDER_RADIUS } from './constnats';
-import { Label, Paragraph } from '../../../common';
+import { Label, Paragraph } from '../../common';
 
 const SelectBox = ({
     id,
@@ -33,8 +32,10 @@ const SelectBox = ({
 
 export default SelectBox;
 
+const BOX_BORDER_RADIUS = '5px';
+
 const Container = styled.div`
-  max-width: 400px;
+  max-width: 430px;
   border-radius: ${BOX_BORDER_RADIUS};
   margin-bottom: 10px;
   border: 1px solid #d8d9da;
