@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactTooltip from 'react-tooltip';
 import Portal from '../Portal';
 import { CloseElement } from './components';
 import { Backdrop, ModalContainer, Header, MyFoxLogo, ModalBody, HeaderTitle, Content } from './style';
@@ -12,6 +13,12 @@ const Modal = ({
     unmountOnClose = false,
     closeOnBackdropClick = false,
 }) => {
+    useEffect(() => {
+        if (isActive) {
+            ReactTooltip.rebuild();
+        }
+    }, [isActive]);
+
     if (!isActive && unmountOnClose) {
         return null;
     }

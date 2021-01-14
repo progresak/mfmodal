@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactTooltip from 'react-tooltip';
 import { CheckBoxSection, SelectBox, RadioSelect, SmartPosImage } from './components';
 import { Button, CenteredContainer, Divider, Label, Paragraph, SubSectionTitle } from '../common';
+import Portal from '../Portal';
 
 const OrderExample = () => (
     <>
@@ -35,10 +37,18 @@ const OrderExample = () => (
         </div>
         <Divider />
         <div>
+            <Portal containerId="tooltip">
+                <Tooltip id="info-tooltip" place="bottom" backgroundColor="rgba(0,0,0,0.6)" delayHide={200} />
+            </Portal>
             <CenteredContainer vertical>
                 <InlineSubSectionTitle>Počet extra uživatelů</InlineSubSectionTitle>
                 <NumberInput type="number" step={1} min={0} />
-                <InfoIcon>i</InfoIcon>
+                <InfoIcon
+                    data-for="info-tooltip"
+                    data-tip="Jeden (první) uživatel je součástí verze STANDARD. Vyberte počet dalších uživatelů (zaměstnanců s kalendářem)."
+                >
+                    i
+                </InfoIcon>
             </CenteredContainer>
             <Label>měsíční cena 149 Kč</Label>
         </div>
@@ -91,6 +101,18 @@ const OrderExample = () => (
         </div>
     </>
 );
+
+const Tooltip = styled(ReactTooltip)`
+    font-family: "Open Sans", serif;
+    position: fixed;
+    max-width: 260px;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 13px;
+    text-decoration: none;
+    font-style: normal;
+    z-index: 1000;
+`;
 
 const NoTopMarginSubSectionTitle = styled(SubSectionTitle)`
     margin-top: 0;
