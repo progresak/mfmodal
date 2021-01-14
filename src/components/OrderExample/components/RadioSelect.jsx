@@ -35,6 +35,10 @@ const LabelElement = styled.label`
     font-weight: bold;
     display: flex;
     align-items: center;
+  
+  @media (max-width: 425px) {
+    margin-right: 5px;
+  }
 `;
 
 const Input = styled(MediumInput)`
