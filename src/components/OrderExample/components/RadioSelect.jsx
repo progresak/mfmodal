@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { MediumInput } from '../../common';
 
 const renderOptions = (nodes, groupName) => nodes.map(({ id, label }) => {
     const elementIdentifier = `${groupName}-${id}`;
@@ -7,7 +8,7 @@ const renderOptions = (nodes, groupName) => nodes.map(({ id, label }) => {
     return (
         <LabelElement key={id} htmlFor={elementIdentifier}>
             <Input id={elementIdentifier} type="radio" name={groupName} />
-            {label}
+            <span>{label}</span>
         </LabelElement>
     );
 });
@@ -16,21 +17,27 @@ const RadioSelect = ({
     options,
     groupName,
 }) => (
-    <div>
+    <Container>
         {renderOptions(options, groupName)}
-    </div>
+    </Container>
 );
 
 export default RadioSelect;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
 
 const LabelElement = styled.label`
     margin-right: 20px;
     font-size: 14px;
     font-weight: bold;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 `;
 
-const Input = styled.input`
+const Input = styled(MediumInput)`
+    margin-top: 0;
     margin-right: 10px;
-    transform: scale(1.3);
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Label, Paragraph } from '../../common';
+import { Label, MediumInput, Paragraph } from '../../common';
 
 const SelectBox = ({
     id,
@@ -16,7 +16,9 @@ const SelectBox = ({
         </Header>
         <Content>
             <BodyLabel htmlFor={`sel-${id}`}>
-                <RadioInput type="radio" id={`sel-${id}`} />
+                <InputContainer>
+                    <MediumInput type="radio" id={`sel-${id}`} />
+                </InputContainer>
                 <BodyContent>
                     <Paragraph>
                         {content}
@@ -36,7 +38,7 @@ const BOX_BORDER_RADIUS = '5px';
 
 const Container = styled.div`
   max-width: 430px;
-  border-radius: ${BOX_BORDER_RADIUS};
+  border-radius: 6px;
   margin-bottom: 10px;
   border: 1px solid #d8d9da;
   &:hover {
@@ -60,9 +62,8 @@ const BodyContent = styled.div`
   margin-left: 10px;
 `;
 
-const RadioInput = styled.input`
-    margin-right: 10px;
-    transform: scale(1.3);
+const InputContainer = styled.div`
+    text-align: center;
 `;
 
 const Header = styled.div`
@@ -77,5 +78,5 @@ const Header = styled.div`
 const Content = styled.div`
     background-color: #e9ebec;
     padding: 10px;
-  border-radius: 0 0 ${BOX_BORDER_RADIUS} ${BOX_BORDER_RADIUS};
+    border-radius: 0 0 ${BOX_BORDER_RADIUS} ${BOX_BORDER_RADIUS};
 `;

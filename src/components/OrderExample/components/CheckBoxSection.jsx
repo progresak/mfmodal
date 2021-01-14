@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CenteredContainer, Label } from '../../common';
+import { CenteredContainer, Label, MediumInput } from '../../common';
 
 const CheckBoxSection = ({ title, label, imgElement = null, groupName }) => (
     <label htmlFor={groupName}>
         <Content>
-            <Checkbox id={groupName} type="checkbox" />
+            <InputContainer>
+                <MediumInput id={groupName} type="checkbox" />
+            </InputContainer>
             {imgElement
                 ? (
                     <ImgContainer>
@@ -31,9 +33,8 @@ const VerticalBody = styled.div`
   justify-content: space-between;
 `;
 
-const Checkbox = styled.input`
-  margin-right: 20px;
-  transform: scale(1.5);
+const InputContainer = styled.div`
+  margin-right: 20px;  
 `;
 
 const ImgContainer = styled.div`

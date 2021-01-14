@@ -16,7 +16,7 @@ export const Button = styled.button`
     color: #ffffff;
     margin-right: 15px;
     margin-top: 15px;
-
+    min-width: 200px;
     font-size: 16px;
     font-weight: bold;
     padding: 15px 30px;
@@ -24,7 +24,7 @@ export const Button = styled.button`
   }
 
   &:hover {
-    ${({ variant }) => variant === 'primary' && 'background-color: #30b142;'}
+    ${({ variant }) => variant === 'primary' && 'background-color: #3dc420;'}
     ${({ variant }) => variant === 'secondary' && 'background-color: #1d60ad;'}
   }
 `;
@@ -35,4 +35,9 @@ export const CenteredContainer = styled.div`
     flex-direction: row;
   
     ${({ horizontal }) => horizontal && 'flex-direction: column;'}
+`;
+
+export const MediumInput = styled.input`
+    height: 16px;
+    width: 16px;
 `;

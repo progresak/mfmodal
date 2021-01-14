@@ -10,7 +10,7 @@ export const SubSectionTitle = styled.h2`
     margin: 15px 0;
     font-size: 18px;
     font-weight: 400;
-    color: #000;
+    color: #48494a;
 `;
 
 export const Label = styled.span`

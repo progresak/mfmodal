@@ -20,13 +20,12 @@ export const ModalContainer = styled.div`
 `;
 
 export const Backdrop = styled.div`
-position: absolute;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #000;
-  opacity: 0.3;
+  background-color: rgba(0,0,0,0.7);
   pointer-events: initial;
   transition: opacity 350ms cubic-bezier(.4, 0, .2, 1);
   

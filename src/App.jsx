@@ -4,7 +4,7 @@ import './App.css';
 import { Button, Modal, OrderExample, SubSectionTitle } from './components';
 
 const App = () => {
-    const [isActive, toggleModal] = useState(false);
+    const [isActive, toggleModal] = useState(true);
 
     return (
         <div className="App">

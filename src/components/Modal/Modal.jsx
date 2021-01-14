@@ -27,9 +27,7 @@ const Modal = ({
                             <strong>Fox</strong>
                         </MyFoxLogo>
                         <HeaderTitle>{modalTitle}</HeaderTitle>
-                        <CloseElement onClick={() => onClose()}>
-                            x
-                        </CloseElement>
+                        <CloseElement onClick={() => onClose()} />
                     </Header>
                     <Content>
                         {children}
