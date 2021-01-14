@@ -5,7 +5,7 @@ import { Button, CenteredContainer, Divider, Label, Paragraph, SubSectionTitle }
 
 const OrderExample = () => (
     <>
-        <SubSectionTitle>Vyberte verzi</SubSectionTitle>
+        <NoTopMarginSubSectionTitle>Vyberte verzi</NoTopMarginSubSectionTitle>
         <div>
             <SelectBox {...{
                 id: 1,
@@ -91,6 +91,10 @@ const OrderExample = () => (
         </div>
     </>
 );
+
+const NoTopMarginSubSectionTitle = styled(SubSectionTitle)`
+    margin-top: 0;
+`;
 
 const InlineSubSectionTitle = styled(SubSectionTitle)`
   display: inline-block;

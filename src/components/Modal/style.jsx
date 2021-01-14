@@ -34,7 +34,6 @@ export const Backdrop = styled.div`
 
 export const ModalBody = styled.div`
   background-color: white;
-  box-shadow: 0 15px 24px -6px rgba(0, 0, 0, .1), 0 -5px 24px -6px rgba(0, 0, 0, .15); // TODO
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -59,10 +58,23 @@ export const Header = styled.div`
   background-color: ${HEADER_BACKGROUND_COLOR};
   border-radius: ${MODAL_BORDER_RADIUS} ${MODAL_BORDER_RADIUS} 0 0;
   color: white;
+  
+  @media (max-width: 425px) {
+    flex-wrap: wrap;
+    min-height:70px;
+  }
 `;
 
 export const HeaderTitle = styled.h1`
     font-size: 18px;
+    
+    @media (max-width: 425px) {
+      order: 3;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
 `;
 
 export const MyFoxLogo = styled.span`
